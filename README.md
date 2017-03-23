@@ -8,9 +8,16 @@ mv mnist.t7 data
 ```
 
 To train MNIST, run
-```Lua
+```Shell
 th train.lua
 ```
 
+If you use Lua JIT, be careful with the internal memory limit (2GB).
+You might consider Torchnet for a more efficient way to load data.
 We will now go deeper into the model and training procedure.
+
+1. Loading data
+2. Preparation (including setting up the model and other things)
+3. Training
+4. Evaluation
 
