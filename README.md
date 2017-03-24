@@ -1,4 +1,4 @@
-TL;DR : THE FIRST PART IS JUST ABOUT HOW TO RUN THE DATA
+TL;DR : THE FIRST PART IS JUST ABOUT HOW TO RUN THE DATA.  
 To download the data (already in .t7 format), run
 ```Shell
 wget https://s3.amazonaws.com/torch7/data/mnist.t7.tgz
@@ -13,7 +13,7 @@ th train.lua
 ```
 
 If you use Lua JIT, be careful with the internal memory limit (2GB).
-You might consider Torchnet for a more efficient way to load data.
+You might consider Torchnet for a more efficient way to load data.  
 We will now go deeper into the model and training procedure.
 
 1. Loading data
