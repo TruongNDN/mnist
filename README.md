@@ -22,7 +22,7 @@ Sau đây, chúng ta sẽ đi vào chi tiết việc huấn luyện MNIST.
   - Hàm mất mát mình chọn khá thông dụng là hàm Negative Log-Likelihood. Hàm này thường được sử dụng khi layer cuối cùng của model là LogSoftmax.  
   - Phần cuối là thêm vào ma trận lỗi (confusion matrix). Phần này bạn có thể biết được model của bạn đang có hiệu quả như thế nào sau mỗi lần chạy evaluation.   
   - Mình có thêm vào phần sử dùng cuda / cudnn hay không. Ở Torch thì phần chuyển từ model sử dụng khi train trên CPU và GPU được chuyển đổi rất đơn giản.   
-3. Training
+3. Training   
   - Để train theo batch, bạn chỉ cần để input có định dạng là batch_size * data, và output là batch_size * target.   
   - Cách thức train trên torch khá đơn giản:   
 ```Lua
@@ -37,7 +37,7 @@ Sau đây, chúng ta sẽ đi vào chi tiết việc huấn luyện MNIST.
   net:updateParameters(learning_rate)
 ```   
    - Các bạn để ý là hàm loss mình tính vào thật ra không cần thiết, nhưng nhiều khi các bạn sẽ cần sử dụng nó để kiểm tra xem model có đang thật sự thực hiện ý bạn muốn hay không. Một cách kiểm tra mình hay dùng là in ra hàm loss sau một thời gian training ngắn để xem hàm loss có giảm đi hay không.   
-4. Evaluation
+4. Evaluation   
    - Để chạy kiểm tra test set thì cũng giống như lúc chạy  training, nhưng bạn chỉ cần giữ lại phần output và đưa vào confusion matrix. Khi bạn in ra confusion matrix, độ chính xác sẽ được hiển thị ra tự động.   
 5. References   
-https://github.com/torch/demos
+ https://github.com/torch/demos
