@@ -25,18 +25,19 @@ Sau đây, chúng ta sẽ đi vào chi tiết việc huấn luyện MNIST.
 3. Training
   - Để train theo batch, bạn chỉ cần để input có định dạng là batch_size * data, và output là batch_size * target.   
   - Cách thức train trên torch khá đơn giản:   
-  ```Lua
-      local output = net:forward(input)
-      local f = criterion:forward(output, target)
-      loss = loss + (f / batch_size)
+```Lua
+  local output = net:forward(input)
+  local f = criterion:forward(output, target)
+  loss = loss + (f / batch_size)
 
-      net:zeroGradParameters()
+  net:zeroGradParameters()
 
-      local gradients = criterion:backward(output, target)
-      net:backward(input, gradients)
-      net:updateParameters(learning_rate)
-   ```   
+  local gradients = criterion:backward(output, target)
+  net:backward(input, gradients)
+  net:updateParameters(learning_rate)
+```   
    - Các bạn để ý là hàm loss mình tính vào thật ra không cần thiết, nhưng nhiều khi các bạn sẽ cần sử dụng nó để kiểm tra xem model có đang thật sự thực hiện ý bạn muốn hay không. Một cách kiểm tra mình hay dùng là in ra hàm loss sau một thời gian training ngắn để xem hàm loss có giảm đi hay không.   
 4. Evaluation
    - Để chạy kiểm tra test set thì cũng giống như lúc chạy  training, nhưng bạn chỉ cần giữ lại phần output và đưa vào confusion matrix. Khi bạn in ra confusion matrix, độ chính xác sẽ được hiển thị ra tự động.   
-
+5. References
+https://github.com/torch/demos
