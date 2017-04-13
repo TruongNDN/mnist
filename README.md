@@ -24,7 +24,7 @@ Sau đây, chúng ta sẽ đi vào chi tiết việc huấn luyện MNIST.
   - Mình có thêm vào phần sử dùng cuda / cudnn hay không. Ở Torch thì phần chuyển từ model sử dụng khi train trên CPU và GPU được chuyển đổi rất đơn giản.   
 3. Training
   - Để train theo batch, bạn chỉ cần để input có định dạng là batch_size * data, và output là batch_size * target.   
-  - Cách thức train trên torch khá đơn giản:
+  - Cách thức train trên torch khá đơn giản:   
   ```Lua
       local output = net:forward(input)
       local f = criterion:forward(output, target)
