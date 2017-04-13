@@ -39,5 +39,5 @@ Sau đây, chúng ta sẽ đi vào chi tiết việc huấn luyện MNIST.
    - Các bạn để ý là hàm loss mình tính vào thật ra không cần thiết, nhưng nhiều khi các bạn sẽ cần sử dụng nó để kiểm tra xem model có đang thật sự thực hiện ý bạn muốn hay không. Một cách kiểm tra mình hay dùng là in ra hàm loss sau một thời gian training ngắn để xem hàm loss có giảm đi hay không.   
 4. Evaluation
    - Để chạy kiểm tra test set thì cũng giống như lúc chạy  training, nhưng bạn chỉ cần giữ lại phần output và đưa vào confusion matrix. Khi bạn in ra confusion matrix, độ chính xác sẽ được hiển thị ra tự động.   
-5. References
+5. References   
 https://github.com/torch/demos
