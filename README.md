@@ -1,4 +1,5 @@
-TL,DR : Bài viết sau đây là hướng dẫn cơ bản về deep learning trên Torch để huấn luyện với dữ liệu MNIST.  
+TL,DR : Bài viết sau đây là hướng dẫn cơ bản về deep learning trên Torch để huấn luyện với dữ liệu MNIST.   
+
 Để tải dữ liệu (file dạng .t7), chạy dòng 
 ```Shell
 wget https://s3.amazonaws.com/torch7/data/mnist.t7.tgz
