@@ -68,7 +68,7 @@ function init()
 end
 
 function evaluate()
-  print('Now evaluating the test size')
+  print('Now evaluating the test set')
   local test_size = test_data.data:size(1)
   local batch_size = opt.batch_size
   confusion:zero()
